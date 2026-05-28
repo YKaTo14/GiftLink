@@ -34,7 +34,12 @@ export async function handleAuthRoutes(req, res, requestUrl, users) {
 
   if (req.method === "POST" && requestUrl.pathname === "/api/auth/login") {
     const body = await readBody(req);
-    const user = users.find((entry) => entry.email === body.email && entry.password === body.password);
+    const collection = {
+      async findOne(query) {
+        return users.find((entry) => entry.email === query.email && entry.password === query.password) || null;
+      },
+    };
+    const user = await collection.findOne({ email: body.email, password: body.password });
     if (!user) {
       return json(res, 401, { error: "Invalid credentials" });
     }
@@ -44,6 +49,16 @@ export async function handleAuthRoutes(req, res, requestUrl, users) {
   if (req.method === "PATCH" && requestUrl.pathname === "/api/auth/user") {
     const body = await readBody(req);
     return json(res, 200, { message: "User updated", profile: body });
+  }
+
+  if (req.method === "GET" && requestUrl.pathname === "/api/auth/me") {
+    const collection = {
+      async findOne(query) {
+        return users.find((entry) => entry.email === query.email) || null;
+      },
+    };
+    const currentUser = await collection.findOne({ email: "demo@giftlink.test" });
+    return json(res, 200, { user: currentUser || null });
   }
 
   return json(res, 404, { error: "Auth route not found" });
