@@ -1,0 +1,9 @@
+curl -X GET http://127.0.0.1:3000/api/gifts/4
+{
+  "id": 4,
+  "name": "Cookware Set",
+  "category": "Kitchen",
+  "condition": "Good",
+  "location": "Ulaanbaatar",
+  "owner": "Munkh"
+}

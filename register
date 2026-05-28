@@ -1,0 +1,9 @@
+curl -X POST http://127.0.0.1:3000/api/auth/register -H "Content-Type: application/json" -d "{\"name\":\"Saraa\",\"email\":\"saraa@example.com\",\"password\":\"gift123\"}"
+{
+  "message": "Registration successful",
+  "user": {
+    "id": 2,
+    "name": "Saraa",
+    "email": "saraa@example.com"
+  }
+}

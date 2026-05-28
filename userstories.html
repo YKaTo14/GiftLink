@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GiftLink Issues</title>
+  <style>
+    :root { --bg:#0d1117; --panel:#161b22; --border:#30363d; --ink:#c9d1d9; --muted:#8b949e; --green:#238636; --blue:#1f6feb; --yellow:#bb8009; --purple:#a371f7; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
+    .topbar { background:#010409; border-bottom:1px solid var(--border); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+    .brand { font-weight:700; }
+    .shell { max-width:1200px; margin: 0 auto; padding: 28px 24px 48px; }
+    .crumbs { color:var(--muted); font-size:.95rem; margin-bottom:18px; }
+    .repo { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+    .avatar { width:44px; height:44px; border-radius:50%; background: linear-gradient(135deg, var(--blue), var(--purple)); }
+    h1 { font-size: 1.7rem; margin:0; }
+    .subtitle { color:var(--muted); margin-top:6px; }
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin: 22px 0; }
+    .btn { padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--panel); color:var(--ink); }
+    .btn.primary { background: var(--green); border-color: #2ea043; color:white; }
+    .issues { display:grid; gap:12px; }
+    .issue { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:start; }
+    .dot { width:12px; height:12px; border-radius:50%; background:#2ea043; margin-top:4px; }
+    .title { font-size:1.02rem; font-weight:700; margin-bottom:8px; }
+    .meta { color:var(--muted); font-size:.92rem; }
+    .labels { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .label { font-size:.78rem; font-weight:700; padding:4px 10px; border-radius:999px; color:white; }
+    .new { background:var(--green); }
+    .icebox { background:var(--blue); }
+    .td { background:var(--yellow); color:#111; }
+    .backlog { background:var(--purple); }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">GitHub</div>
+    <div class="meta">Issues</div>
+  </div>
+  <div class="shell">
+    <div class="crumbs">YKaTo14 / <strong>fullstack-capstone-project</strong> / Issues</div>
+    <div class="repo">
+      <div class="avatar"></div>
+      <div>
+        <h1>fullstack-capstone-project</h1>
+        <div class="subtitle">GiftLink user stories grouped by label</div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <div class="btn primary">New issue</div>
+      <div class="btn">Labels</div>
+      <div class="btn">Milestones</div>
+      <div class="btn">Projects</div>
+    </div>
+    <div class="issues">
+      <div class="issue"><div class="dot"></div><div><div class="title">As a user, I want to post items quickly so that I can give them away.</div><div class="meta">#1 opened today by YKaTo14</div></div><div class="labels"><span class="label new">new</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a visitor, I want to browse the home page so that I can see featured gifts.</div><div class="meta">#2 opened today by YKaTo14</div></div><div class="labels"><span class="label icebox">icebox</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a maintainer, I want to update routing so that search stays fast.</div><div class="meta">#3 opened today by YKaTo14</div></div><div class="labels"><span class="label td">technical debt</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a user, I want to filter by category so that results are easier to find.</div><div class="meta">#4 opened today by YKaTo14</div></div><div class="labels"><span class="label backlog">backlog</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a user, I want to view item details so that I can decide to request it.</div><div class="meta">#5 opened today by YKaTo14</div></div><div class="labels"><span class="label new">new</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a donor, I want to edit my listing so that the information stays accurate.</div><div class="meta">#6 opened today by YKaTo14</div></div><div class="labels"><span class="label icebox">icebox</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a developer, I want to improve data validation so that bad input is rejected.</div><div class="meta">#7 opened today by YKaTo14</div></div><div class="labels"><span class="label td">technical debt</span></div></div>
+      <div class="issue"><div class="dot"></div><div><div class="title">As a user, I want to save favorites so that I can return later.</div><div class="meta">#8 opened today by YKaTo14</div></div><div class="labels"><span class="label backlog">backlog</span></div></div>
+    </div>
+  </div>
+</body>
+</html>

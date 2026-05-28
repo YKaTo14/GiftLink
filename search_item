@@ -1,0 +1,35 @@
+curl -X GET "http://127.0.0.1:3000/api/search?category=Furniture"
+[
+  {
+    "id": 1,
+    "name": "Wooden Desk",
+    "category": "Furniture",
+    "condition": "Good",
+    "location": "Ulaanbaatar",
+    "owner": "Nara"
+  },
+  {
+    "id": 6,
+    "name": "Bookshelf",
+    "category": "Furniture",
+    "condition": "Good",
+    "location": "Ulaanbaatar",
+    "owner": "Temuulen"
+  },
+  {
+    "id": 11,
+    "name": "Coffee Table",
+    "category": "Furniture",
+    "condition": "Good",
+    "location": "Bayanzurkh",
+    "owner": "Altan"
+  },
+  {
+    "id": 15,
+    "name": "Study Chair",
+    "category": "Furniture",
+    "condition": "Good",
+    "location": "Khan-Uul",
+    "owner": "Od"
+  }
+]

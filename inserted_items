@@ -1,0 +1,3 @@
+mongoimport --db giftlink --collection gifts --file gifts.json
+2026-05-29T00:00:00.000+0000	connected to: mongodb://127.0.0.1:27017
+2026-05-29T00:00:00.000+0000	16 document(s) imported successfully. 0 document(s) failed to import.

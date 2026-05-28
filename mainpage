@@ -1,0 +1,27 @@
+curl -X GET http://127.0.0.1:3000/api/gifts
+[
+  {
+    "id": 1,
+    "name": "Wooden Desk",
+    "category": "Furniture",
+    "condition": "Good",
+    "location": "Ulaanbaatar",
+    "owner": "Nara"
+  },
+  {
+    "id": 2,
+    "name": "Baby Stroller",
+    "category": "Baby Gear",
+    "condition": "Like new",
+    "location": "Darkhan",
+    "owner": "Tsolmon"
+  },
+  {
+    "id": 3,
+    "name": "Laptop Stand",
+    "category": "Office",
+    "condition": "Fair",
+    "location": "Erdenet",
+    "owner": "Baatar"
+  }
+]

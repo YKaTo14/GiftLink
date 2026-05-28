@@ -1,0 +1,10 @@
+{
+  "name": "giftlink",
+  "version": "1.0.0",
+  "description": "GiftLink capstone submission scaffold",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
