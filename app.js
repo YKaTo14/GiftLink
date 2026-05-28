@@ -101,6 +101,17 @@ const server = http.createServer(async (req, res) => {
     return serveLandingPage(res);
   }
 
+  if (requestUrl.pathname === "/api/search" && req.method === "GET") {
+    const category = String(requestUrl.searchParams.get("category") || "").trim().toLowerCase();
+    const query = String(requestUrl.searchParams.get("q") || "").trim().toLowerCase();
+    const results = gifts.filter((gift) => {
+      const categoryMatches = !category || gift.category.toLowerCase() === category;
+      const queryMatches = !query || gift.name.toLowerCase().includes(query);
+      return categoryMatches && queryMatches;
+    });
+    return json(res, 200, results);
+  }
+
   if (requestUrl.pathname === "/api/search") {
     return handleSearchRoutes(req, res, requestUrl);
   }

@@ -1,3 +1,9 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const dbName = "giftdb";
+
 const client = {
   async connect() {
     return this;
@@ -9,7 +15,7 @@ const client = {
 
 export async function connectToDatabase() {
   await client.connect();
-  return client.db("GiftLink");
+  return client.db(dbName);
 }
 
 export async function getClient() {

@@ -51,13 +51,14 @@ export async function handleAuthRoutes(req, res, requestUrl, users) {
     return json(res, 200, { message: "User updated", profile: body });
   }
 
-  if (req.method === "GET" && requestUrl.pathname === "/api/auth/me") {
+  if (req.method === "POST" && requestUrl.pathname === "/api/auth/current-user") {
+    const body = await readBody(req);
     const collection = {
       async findOne(query) {
         return users.find((entry) => entry.email === query.email) || null;
       },
     };
-    const currentUser = await collection.findOne({ email: "demo@giftlink.test" });
+    const currentUser = await collection.findOne({ email: body.email });
     return json(res, 200, { user: currentUser || null });
   }
 
